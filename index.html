@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#176b5b">
+  <title>ใบสรุปรายการ</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <h1>ใบสรุปรายการ</h1>
+      <p>สำหรับลูกค้าประจำ</p>
+    </div>
+    <button id="newReceiptBtn" class="secondary">เริ่มใบใหม่</button>
+  </header>
+
+  <main>
+    <section class="panel customer-fields">
+      <label>ชื่อลูกค้า<input id="customerName" autocomplete="name" value="มะลิ" placeholder="เช่น ร้านลูกค้า"></label>
+      <label>หมายเหตุ<textarea id="note" rows="2" placeholder="รายละเอียดเพิ่มเติม"></textarea></label>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <h2>รายการประจำ</h2>
+        <span id="productStatus" aria-live="polite"></span>
+      </div>
+      <div id="productList" class="product-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <h2>รายการในใบนี้</h2>
+        <div class="inline-actions">
+          <button id="addCustomBtn">เพิ่มรายการอื่น</button>
+          <button id="addPaymentBtn" class="payment-button">เพิ่มรายการจ่ายไว้</button>
+        </div>
+      </div>
+      <div id="currentItems" class="current-items"></div>
+    </section>
+
+    <section class="receipt-wrap">
+      <h2>ตัวอย่างใบสรุป</h2>
+      <div id="receiptPreview" class="receipt-preview"></div>
+    </section>
+
+    <section class="actions panel">
+      <button id="pngBtn">บันทึกเป็นรูป PNG</button>
+      <button id="jsonBtn">บันทึกข้อมูล JSON</button>
+      <button id="openBtn" class="secondary">เปิดใบเก่า</button>
+      <button id="clearBtn" class="danger">ล้างรายการทั้งหมด</button>
+      <input id="jsonFile" type="file" accept=".json,application/json" hidden>
+    </section>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+  </main>
+
+  <dialog id="itemDialog">
+    <form id="itemForm">
+      <h2 id="dialogTitle">เพิ่มรายการอื่น</h2>
+      <input id="editItemId" type="hidden">
+      <label>ชื่อรายการ<input id="itemName" required maxlength="100"></label>
+      <div class="form-grid">
+        <label>จำนวน<input id="itemQuantity" type="number" min="0" step="1" required></label>
+        <label>หน่วย<input id="itemUnit" required maxlength="30"></label>
+        <label>ราคาต่อหน่วย<input id="itemPrice" type="number" min="0" step="0.01" required></label>
+        <label>ประเภท<select id="itemType"><option value="sale">สินค้า</option><option value="payment">จ่ายไว้</option></select></label>
+      </div>
+      <div class="dialog-actions">
+        <button type="button" data-close>ยกเลิก</button>
+        <button type="submit">บันทึก</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="draftDialog">
+    <h2>พบใบที่ยังทำไม่เสร็จ</h2>
+    <p>ต้องการเปิดต่อหรือไม่</p>
+    <div class="dialog-actions">
+      <button id="discardDraftBtn" class="danger">ทิ้งข้อมูลเดิม</button>
+      <button id="restoreDraftBtn">เปิดต่อ</button>
+    </div>
+  </dialog>
+
+  <div id="exportArea" aria-hidden="true"></div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+[
+  {"id":"item-001","name":"น้ำมัน","price":52,"unit":"ขวด","type":"sale","sort_order":1},
+  {"id":"item-002","name":"ข้าวสาร 5 ลิตร","price":185,"unit":"ถุง","type":"sale","sort_order":2},
+  {"id":"item-003","name":"ข้าวเหนียว 10 ลิตร","price":260,"unit":"ถุง","type":"sale","sort_order":3},
+  {"id":"item-004","name":"น้ำมันหอย","price":54,"unit":"ขวด","type":"sale","sort_order":4},
+  {"id":"item-005","name":"น้ำปลาทิพรส","price":32,"unit":"ขวด","type":"sale","sort_order":5},
+  {"id":"item-006","name":"ซันไลต์","price":25,"unit":"ถุง","type":"sale","sort_order":6},
+  {"id":"item-007","name":"นมสด","price":26,"unit":"กระป๋อง","type":"sale","sort_order":7},
+  {"id":"item-008","name":"ผงชูรส","price":59,"unit":"ถุง","type":"sale","sort_order":8},
+  {"id":"item-009","name":"6x14","price":14,"unit":"ถุง","type":"sale","sort_order":9},
+  {"id":"item-010","name":"8x16","price":16,"unit":"ถุง","type":"sale","sort_order":10},
+  {"id":"item-011","name":"9x18","price":18,"unit":"ถุง","type":"sale","sort_order":11},
+  {"id":"item-012","name":"5x8","price":40,"unit":"ถุง","type":"sale","sort_order":12},
+  {"id":"item-013","name":"6x9","price":40,"unit":"ถุง","type":"sale","sort_order":13},
+  {"id":"item-014","name":"สบู่","price":32,"unit":"ก้อน","type":"sale","sort_order":14},
+  {"id":"item-015","name":"ยากันยุงควันน้อย","price":22,"unit":"กล่อง","type":"sale","sort_order":15},
+  {"id":"item-016","name":"ถุงขยะเล็ก","price":45,"unit":"ถุง","type":"sale","sort_order":16},
+  {"id":"item-017","name":"ผ้าอนามัย","price":14,"unit":"ห่อ","type":"sale","sort_order":17},
+  {"id":"item-018","name":"ต้น","price":59,"unit":"","type":"sale","sort_order":18},
+  {"id":"payment-project","name":"จ่ายไว้","price":0,"unit":"บาท","type":"payment","sort_order":99}
+]
