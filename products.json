@@ -16,6 +16,6 @@
   {"id":"item-015","name":"ยากันยุงควันน้อย","price":22,"unit":"กล่อง","type":"sale","sort_order":15},
   {"id":"item-016","name":"ถุงขยะเล็ก","price":45,"unit":"ถุง","type":"sale","sort_order":16},
   {"id":"item-017","name":"ผ้าอนามัย","price":14,"unit":"ห่อ","type":"sale","sort_order":17},
-  {"id":"item-018","name":"ต้น","price":59,"unit":"","type":"sale","sort_order":18},
+  {"id":"item-018","name":"ต้น","price":59,"unit":"รายการ","type":"sale","sort_order":18},
   {"id":"payment-project","name":"จ่ายไว้","price":0,"unit":"บาท","type":"payment","sort_order":99}
 ]
